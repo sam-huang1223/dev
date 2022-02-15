@@ -1,4 +1,5 @@
 **
 !.gitignore
 !.bash_aliases
+!.bash_functions
 !.tmux.conf

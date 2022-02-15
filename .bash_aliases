@@ -7,14 +7,13 @@ source /home/ubuntu/strap/devtools/shortcuts.sh
 # projects
 alias lighthouse='cd ~/strap/src/python/internal/lighthouse'
 
-
 # docker
 ## applying to all containers
 ### info
-alias dnames="docker ps --format '{{.Names}}'"
-alias dports="docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a"
+alias dnames='docker ps --format "{{.Names}}"'
+alias dports='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a'
 ### actions
-alias dockernuke="docker stop $(docker ps -a -q); docker system prune -a --volumes"
+alias dockernuke='docker stop $(docker ps -a -q); docker system prune -a --volumes'
 
 
 # k8s
@@ -57,5 +56,7 @@ alias gsl="git stash list"
 alias gsa="git stash apply"
 
 #### list branches sorted by last modified
-alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-alias gpsup="git push --set-upstream origin $(gbl | awk 'NR==1{print $8}')"
+alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
+
+# helpers
+alias watch="watch -n 5 --color "
