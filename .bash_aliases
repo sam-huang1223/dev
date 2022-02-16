@@ -4,6 +4,9 @@ source /home/ubuntu/strap/devtools/shortcuts.sh
 
 # ~/.bashrc
 
+# bash
+alias ftc='ls | rev | cut -d'.' -f1 | rev | sort | uniq -c'
+
 # projects
 alias lighthouse='cd ~/strap/src/python/internal/lighthouse'
 
@@ -44,8 +47,8 @@ alias gdc="git diff --cached"
 
 alias gs="git status -s"
 
-alias gco="git checkout"
-alias gcob="git checkout -b"
+alias gcon="git checkout"
+alias gcom="git checkout main"
 
 alias gb="git branch"
 

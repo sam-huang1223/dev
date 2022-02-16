@@ -2,8 +2,27 @@
 
 # ~/.bashrc
 
+# bash
+up () {
+    levels=$1
+
+    while [ "$levels" -gt "0" ]; do
+        cd ..
+        levels=$(($levels - 1))
+    done
+}
+
+# git
 gpsup () {
     git push --set-upstream origin $(gbl | awk 'NR==1{print $8}')
+}
+
+gco () {
+    git checkout sh/ENG-$1
+}
+
+gcob () {
+    git checkout -b sh/ENG-$1
 }
 
 # snorkel
