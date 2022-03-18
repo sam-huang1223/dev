@@ -18,7 +18,6 @@ alias dports='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}
 ### actions
 alias dockernuke='docker stop $(docker ps -a -q); docker system prune -a --volumes'
 
-
 # k8s
 alias k='kubectl'
 alias kc='kubectl config'
@@ -26,8 +25,19 @@ alias kg='kubectl get'
 alias kl='kubectl logs'
 alias kd='kubectl describe'
 
+alias ked='kubectl edit deployment'
+
 alias kcc='kubectl config current-context' 
 alias kcu='kubectl config use-context' 
+alias kcsn='kubectl config set-context --current --namespace'
+
+alias kdelpv="kubectl get pv | grep Released | awk '$1 {print$1}' | while read vol; do kubectl delete pv/${vol}; done"
+
+alias kgpa="kubectl get pods --all-namespaces"
+
+#https://krew.sigs.k8s.io/plugins/
+#df-pv
+#
 
 # git
 alias gl='git log --pretty=format:"%C(yellow)%H %ad%Cred%d %an %Creset%s" --decorate --date=short'
@@ -52,6 +62,9 @@ alias gcom="git checkout main"
 
 alias gb="git branch"
 
+alias grm="git rebase main"
+alias grc="git rebase --continue"
+
 alias gcvm="git cherry -v main"
 
 alias gsp="git stash push -m"
@@ -63,3 +76,8 @@ alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(obj
 
 # helpers
 alias watch="watch -n 5 --color "
+
+
+for s in $( (($test)) || echo 'abc def' ); do
+    echo $s
+done

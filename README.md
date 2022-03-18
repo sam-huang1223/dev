@@ -10,9 +10,11 @@
 ### Terminal
 * exa
 * the_silver_searcher (ag)
-* tmux
+* tmux  
+    * `tmux a -t [TAG] -d` to resize screen
 * pbcopy (e.g. pbcopy < ~/.ssh/id_ed25519.pub)
 * fzf
+* glances [-2]
 
 #### Commands
 * ssh-agent (see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
@@ -25,11 +27,14 @@
 * control + r → search previous commands
 * If you are using the Pylance VSCode extension you can set your source folder via the setting `python.analysis.extraPaths` (this fixes project imports not resolving)
 * git
-    * git cherry -v main
+    * git cherry -v main  # see differing commits
     * git diff [--stat] [--cached] HEAD^
+    * git checkout experiment -- app.js  # copy the changes to app.js in branch "experiment"
 * cleanup
-    * docker system prune -a --volumes 
-    * ./strap clean --deep
+    * docker system prune -a
+* iterm2
+    * https://iterm2.com/documentation-captured-output.html
+    * 
 
 #### Optimizations
 * https://coderwall.com/p/ds2dha/word-line-deletion-and-navigation-shortcuts-in-iterm2

@@ -21,8 +21,21 @@ gco () {
     git checkout sh/ENG-$1
 }
 
+gcoc () {
+    git checkout $1
+}
+
 gcob () {
     git checkout -b sh/ENG-$1
+}
+
+gcobc () {
+    git checkout -b $1
+}
+
+# k8s
+ksdn () {
+    kubectl config set-context --current --namespace $1
 }
 
 # snorkel
