@@ -30,6 +30,7 @@
     * git cherry -v main  # see differing commits
     * git diff [--stat] [--cached] HEAD^
     * git checkout experiment -- app.js  # copy the changes to app.js in branch "experiment"
+    * https://stackoverflow.com/questions/9864728/how-to-get-git-to-clone-into-current-directory
 * cleanup
     * docker system prune -a
 * iterm2

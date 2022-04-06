@@ -1,0 +1,27 @@
+# This file contains custom additions to the standard bashrc
+
+### Additional steps in command prompt
+# sudo apt install bash-completion
+# sudo dpkg-reconfigure tzdata
+###
+
+# see https://github.com/docker/docker-credential-helpers/issues/102
+echo "pass is initialized" | pass insert --echo docker-credential-helpers/docker-pass-initialized-check
+
+#export GITPROMPT_FORMAT="(%h |↓%b↑%a) "  # deprecated I think?
+# see https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+export GIT_PS1_SHOWUPSTREAM="verbose name"
+export GIT_PS1_DESCRIBE_STYLE="branch"
+
+PROMPT_COMMAND=__prompt_command
+
+__prompt_command() {
+    local curr_exit="$?"
+
+    PS1='\[\e]0;\w\a\]\n\[\033[38;5;6m\](\A)\[$(tput sgr0)\]\[\e[32m\] \u@\h: '
+    if [ "$curr_exit" != 0 ];
+    then
+        PS1+='\[\e[91m\]<⚠️ >\e[0m '
+    fi
+    PS1+='\[\e[33m\][\w]\[\e[0m\]\[\e[91m\]$(__git_ps1)\e[0m \n\$ '
+}

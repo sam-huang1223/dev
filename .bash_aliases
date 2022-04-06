@@ -35,6 +35,9 @@ alias kdelpv="kubectl get pv | grep Released | awk '$1 {print$1}' | while read v
 
 alias kgpa="kubectl get pods --all-namespaces"
 
+alias ktn="kubectl top node"
+alias ktp="kubectl top pod"
+
 #https://krew.sigs.k8s.io/plugins/
 #df-pv
 #
@@ -76,8 +79,3 @@ alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(obj
 
 # helpers
 alias watch="watch -n 5 --color "
-
-
-for s in $( (($test)) || echo 'abc def' ); do
-    echo $s
-done
