@@ -2,13 +2,8 @@
 # Source Snorkel shortcuts (this was done via ./strap shortcuts install)
 source /home/ubuntu/strap/devtools/shortcuts.sh
 
-# ~/.bashrc
-
 # bash
 alias ftc='ls | rev | cut -d'.' -f1 | rev | sort | uniq -c'
-
-# projects
-alias lighthouse='cd ~/strap/src/python/internal/lighthouse'
 
 # docker
 ## applying to all containers

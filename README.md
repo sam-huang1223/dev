@@ -2,7 +2,7 @@
 ### Mac OS
 * Iterm2 + Oh my zsh + Powerlevel10k
 * Raycast
-* et (install on remote) or mosh (no install on remote)
+* et (needs install on remote)
 * superpowered
 * fig
 * displaylink manager
@@ -35,7 +35,6 @@
     * docker system prune -a
 * iterm2
     * https://iterm2.com/documentation-captured-output.html
-    * 
 
 #### Optimizations
 * https://coderwall.com/p/ds2dha/word-line-deletion-and-navigation-shortcuts-in-iterm2
@@ -44,5 +43,16 @@
 * https://stackoverflow.com/questions/9604723/alternate-output-format-for-psql       
 
 ### Chrome
-* Custom Search Engines (e.g. sh -> explainshell.com)
+* Extensions
+    * GoLinks
+    * DashLane
+    * ClockWise
+    * OneTab
+* Custom Search Engines
+    * sh -> https://explainshell.com/explain?cmd=%s
+    * g -> https://github.com/search?q=%s&ref=opensearch
+    * j -> https://snorkelai.atlassian.net/secure/QuickSearch.jspa?searchString=%s
+    * m -> https://www.google.com/maps/search/%s/?authuser=0
+    * b -> https://github.com/snorkel-ai/strap/branches/all?query=%s
+    * y -> https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch
 
