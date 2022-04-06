@@ -1,5 +1,5 @@
-## Dev Setup
-### Mac OS
+# Dev Environment
+## Mac OS
 * Iterm2 + Oh my zsh + Powerlevel10k
 * Raycast
 * et (needs install on remote)
@@ -7,7 +7,7 @@
 * fig
 * displaylink manager
 
-### Terminal
+## Terminal
 * exa
 * the_silver_searcher (ag)
 * tmux  
@@ -16,14 +16,14 @@
 * fzf
 * glances [-2]
 
-#### Commands
+### Commands
 * ssh-agent (see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 * fzf → ** + tab for autocomplete (works for files, ssh, and kill -9)
 * eval "$(ssh-agent -s)"
 * type CMD # will show command referenced by alias
     * type -a CMD # will show all referenced commands in order of precedence
 
-#### Tips
+### Tips
 * control + r → search previous commands
 * If you are using the Pylance VSCode extension you can set your source folder via the setting `python.analysis.extraPaths` (this fixes project imports not resolving)
 * git
@@ -42,17 +42,18 @@
 * https://garywoodfine.com/use-pbcopy-on-ubuntu/
 * https://stackoverflow.com/questions/9604723/alternate-output-format-for-psql       
 
-### Chrome
-* Extensions
-    * GoLinks
-    * DashLane
-    * ClockWise
-    * OneTab
-* Custom Search Engines
-    * sh -> https://explainshell.com/explain?cmd=%s
-    * g -> https://github.com/search?q=%s&ref=opensearch
-    * j -> https://snorkelai.atlassian.net/secure/QuickSearch.jspa?searchString=%s
-    * m -> https://www.google.com/maps/search/%s/?authuser=0
-    * b -> https://github.com/snorkel-ai/strap/branches/all?query=%s
-    * y -> https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch
+## Chrome
+### Extensions
+* GoLinks
+* DashLane
+* ClockWise
+* OneTab
+
+### Custom Search Engines
+* sh -> https://explainshell.com/explain?cmd=%s
+* g -> https://github.com/search?q=%s&ref=opensearch
+* j -> https://snorkelai.atlassian.net/secure/QuickSearch.jspa?searchString=%s
+* m -> https://www.google.com/maps/search/%s/?authuser=0
+* b -> https://github.com/snorkel-ai/strap/branches/all?query=%s
+* y -> https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch
 

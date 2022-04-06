@@ -1,3 +1,7 @@
+# ~/.bashrc
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi
 
 # Source Snorkel shortcuts (this was done via ./strap shortcuts install)
 source /home/ubuntu/strap/devtools/shortcuts.sh

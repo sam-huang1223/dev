@@ -1,5 +1,10 @@
 # This file contains custom additions to the standard bashrc
 
+# ~/.bashrc
+#if [ -f ~/.bashrc_custom ]; then
+#    . ~/.bashrc_custom
+#fi
+
 ### Additional steps in command prompt
 # sudo apt install bash-completion
 # sudo dpkg-reconfigure tzdata
