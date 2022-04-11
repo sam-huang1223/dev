@@ -1,7 +1,19 @@
-**
+# everything
+/*
+
+# except
 !.gitignore
 !.bash_aliases
 !.bash_functions
 !.bashrc_custom
 !.tmux.conf
 !README.md
+
+# fun little exercise in allowing for a specific file in nested subdirectories
+!.vscode-server/
+.vscode-server/*
+!.vscode-server/data/
+.vscode-server/data/*
+!.vscode-server/data/Machine/
+.vscode-server/data/Machine/*
+!.vscode-server/data/Machine/settings.json

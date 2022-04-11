@@ -37,9 +37,11 @@ gcobc () {
 }
 
 # k8s
-ksdn () {
-    kubectl config set-context --current --namespace $1
+kdps () {
+    kubectl get pods --field-selector "status.phase=$1" -o name | xargs kubectl delete
 }
+
+
 
 # snorkel
 lhf () {

@@ -8,6 +8,7 @@ source /home/ubuntu/strap/devtools/shortcuts.sh
 
 # bash
 alias ftc='ls | rev | cut -d'.' -f1 | rev | sort | uniq -c'
+alias space='df -h | grep /dev/nvme'
 
 # docker
 ## applying to all containers

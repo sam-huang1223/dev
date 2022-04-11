@@ -8,10 +8,13 @@
 ### Additional steps in command prompt
 # sudo apt install bash-completion
 # sudo dpkg-reconfigure tzdata
+# sudo apt install silversearcher-ag
+# sudo apt install jq
 ###
 
+# if encrypting credentials in ~/.docker/config.json
 # see https://github.com/docker/docker-credential-helpers/issues/102
-echo "pass is initialized" | pass insert --echo docker-credential-helpers/docker-pass-initialized-check
+#echo "pass is initialized" | pass insert --echo docker-credential-helpers/docker-pass-initialized-check
 
 #export GITPROMPT_FORMAT="(%h |↓%b↑%a) "  # deprecated I think?
 # see https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh

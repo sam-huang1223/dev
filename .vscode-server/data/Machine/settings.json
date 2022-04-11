@@ -1,0 +1,76 @@
+{
+    "editor.definitionLinkOpensInPeek": true,
+    "autoDocstring.guessTypes": false,
+    "editor.accessibilitySupport": "off",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "terminal.integrated.env.osx": {
+      "FIG_NEW_SESSION": "1"
+    },
+    "files.autoSave": "onWindowChange",
+    "editor.wordWrap": "on",
+    "terminal.integrated.inheritEnv": false,
+    "autoDocstring.docstringFormat": "numpy",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.formatting.provider": "black",
+    "redhat.telemetry.enabled": false,
+    "liveServer.settings.host": "",
+  
+    "todohighlight.keywords": [
+        {
+            "text": "#FIX",
+            "color": "#000000",
+            "backgroundColor": "Khaki",
+            "overviewRulerColor": "Khaki",
+            "border": "1px solid Khaki",
+            "borderRadius": "3px",
+            "isWholeLine": false
+        },
+      {
+          "text": "#DO",
+          "color": "#000000",
+          "backgroundColor": "Chartreuse",
+          "overviewRulerColor": "Chartreuse",
+          "border": "1px solid Chartreuse",
+          "borderRadius": "3px",
+          "isWholeLine": false
+      },
+      {
+          "text": "#NOTE",
+          "color": "#000000",
+          "backgroundColor": "Ivory",
+          "overviewRulerColor": "Ivory",
+          "border": "1px solid Ivory",
+          "borderRadius": "3px",
+          "isWholeLine": false
+      },
+      {
+          "text": "#Q",
+          "color": "#000000",
+          "backgroundColor": "STEELBLUE",
+          "overviewRulerColor": "STEELBLUE",
+          "border": "1px solid STEELBLUE",
+          "borderRadius": "3px",
+          "isWholeLine": false
+      },
+      {
+          "text": "logger.",
+          "color": "#000000",
+          "backgroundColor": "LightSlateGray",
+          "overviewRulerColor": "LightSlateGray",
+          "border": "1px solid LightSlateGray",
+          "borderRadius": "3px",
+          "isWholeLine": true
+      },
+      {
+          "text": "#WARN",
+          "color": "white",
+          "backgroundColor": "red",
+          "border": "1px solid red",
+          "borderRadius": "3px",
+          "isWholeLine": false
+      },
+    ]
+  
+  }
