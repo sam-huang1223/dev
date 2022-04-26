@@ -20,6 +20,10 @@ gpsup () {
     git push --set-upstream origin $(gbl | awk 'NR==1{print $8}')
 }
 
+gbd () {
+    git branch -D sh/ENG-$1
+}
+
 gco () {
     git checkout sh/ENG-$1
 }

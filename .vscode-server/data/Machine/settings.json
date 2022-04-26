@@ -19,16 +19,34 @@
   
     "todohighlight.keywords": [
         {
-            "text": "#FIX",
+            "text": "# FIX",
             "color": "#000000",
-            "backgroundColor": "Khaki",
-            "overviewRulerColor": "Khaki",
-            "border": "1px solid Khaki",
+            "backgroundColor": "Salmon",
+            "overviewRulerColor": "Salmon",
+            "border": "1px solid Salmon",
             "borderRadius": "3px",
             "isWholeLine": false
         },
       {
-          "text": "#DO",
+          "text": "# TEMP",
+          "color": "#000000",
+          "backgroundColor": "DarkOrange",
+          "overviewRulerColor": "DarkOrange",
+          "border": "1px solid DarkOrange",
+          "borderRadius": "3px",
+          "isWholeLine": false
+      },
+      {
+          "text": "# NOTE",
+          "color": "#000000",
+          "backgroundColor": "Khaki",
+          "overviewRulerColor": "Khaki",
+          "border": "1px solid Khaki",
+          "borderRadius": "3px",
+          "isWholeLine": false
+      },
+      {
+          "text": "# QQ",
           "color": "#000000",
           "backgroundColor": "Chartreuse",
           "overviewRulerColor": "Chartreuse",
@@ -37,37 +55,28 @@
           "isWholeLine": false
       },
       {
-          "text": "#NOTE",
+        "text": "# DEPRECATE",
+        "color": "white",
+        "backgroundColor": "STEELBLUE",
+        "overviewRulerColor": "STEELBLUE",
+        "border": "1px solid STEELBLUE",
+        "borderRadius": "3px",
+        "isWholeLine": false
+    },
+      {
+          "text": "logger.",
           "color": "#000000",
           "backgroundColor": "Ivory",
           "overviewRulerColor": "Ivory",
           "border": "1px solid Ivory",
           "borderRadius": "3px",
-          "isWholeLine": false
-      },
-      {
-          "text": "#Q",
-          "color": "#000000",
-          "backgroundColor": "STEELBLUE",
-          "overviewRulerColor": "STEELBLUE",
-          "border": "1px solid STEELBLUE",
-          "borderRadius": "3px",
-          "isWholeLine": false
-      },
-      {
-          "text": "logger.",
-          "color": "#000000",
-          "backgroundColor": "LightSlateGray",
-          "overviewRulerColor": "LightSlateGray",
-          "border": "1px solid LightSlateGray",
-          "borderRadius": "3px",
           "isWholeLine": true
       },
       {
-          "text": "#WARN",
+          "text": "# WARN",
           "color": "white",
-          "backgroundColor": "red",
-          "border": "1px solid red",
+          "backgroundColor": "FireBrick",
+          "border": "1px solid FireBrick",
           "borderRadius": "3px",
           "isWholeLine": false
       },

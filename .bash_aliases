@@ -43,7 +43,7 @@ alias ktp="kubectl top pod"
 #
 
 # git
-alias gl='git log --pretty=format:"%C(yellow)%H %ad%Cred%d %an %Creset%s" --decorate --date=short'
+alias gl="git log --pretty=format:'%C(yellow)%H %ad%Cred%d %an %Creset%s' --decorate --date=format:'%m-%d-%Y %H:%M:%S'"
 alias ga="git add ."
 alias gap="git add -p"
 
@@ -69,6 +69,8 @@ alias grm="git rebase main"
 alias grc="git rebase --continue"
 
 alias gcvm="git cherry -v main"
+alias gcp="git cherry-pick"
+alias gcpc="git cherry-pick --continue"
 
 alias gsp="git stash push -m"
 alias gsl="git stash list"
@@ -76,6 +78,7 @@ alias gsa="git stash apply"
 
 #### list branches sorted by last modified
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
+alias gblr="git branch --format '%(refname:short) %(upstream)'"
 
 # helpers
 alias watch="watch -n 5 --color "
