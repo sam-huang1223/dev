@@ -24,8 +24,12 @@
     * type -a CMD # will show all referenced commands in order of precedence
 
 ### Tips
-* control + r → search previous commands
-* If you are using the Pylance VSCode extension you can set your source folder via the setting `python.analysis.extraPaths` (this fixes project imports not resolving)
+* bash
+    * control + r → search previous commands
+* VSCode
+    * If you are using the Pylance VSCode extension you can set your source folder via the setting `python.analysis.extraPaths` (this fixes project imports not resolving)
+    * CMD+P to search for a file
+    * CMD+SHIFT+F to find
 * git
     * git cherry -v main  # see differing commits
     * git diff [--stat] [--cached] HEAD^

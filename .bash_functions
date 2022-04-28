@@ -5,7 +5,7 @@
 #    . ~/.bash_functions
 #fi
 
-# bash
+### bash
 up () {
     levels=$1
 
@@ -15,7 +15,7 @@ up () {
     done
 }
 
-# git
+### git
 gpsup () {
     git push --set-upstream origin $(gbl | awk 'NR==1{print $8}')
 }
@@ -40,14 +40,23 @@ gcobc () {
     git checkout -b $1
 }
 
-# k8s
+### k8s
 kdps () {
     kubectl get pods --field-selector "status.phase=$1" -o name | xargs kubectl delete
 }
 
 
-
-# snorkel
+### snorkel
 lhf () {
     kl $(kg pods -n lighthouse -o custom-columns=':metadata.name' | tail -n 1) -n lighthouse -f
+}
+
+# run test with breakpoint()
+tbp () {
+    bazel run "test/python/$1" "--test_arg=-k=$2"
+}
+
+# run test without breakpoint()
+t () {
+    bazel run "test/python/$1" --test_arg=--disable-pytest-warnings --test_arg=-vvv --test_arg=-s --test_arg=-k="$2" --test_arg=--log-cli-level=INFO
 }

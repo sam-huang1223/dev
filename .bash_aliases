@@ -3,22 +3,21 @@
 #    . ~/.bash_aliases
 #fi
 
-# Source Snorkel shortcuts (this was done via ./strap shortcuts install)
+### Source Snorkel shortcuts (this was done via ./strap shortcuts install)
 source /home/ubuntu/strap/devtools/shortcuts.sh
 
-# bash
+### bash
 alias ftc='ls | rev | cut -d'.' -f1 | rev | sort | uniq -c'
 alias space='df -h | grep /dev/nvme'
 
-# docker
-## applying to all containers
-### info
+### docker
+# info
 alias dnames='docker ps --format "{{.Names}}"'
 alias dports='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a'
-### actions
+# actions
 alias dockernuke='docker stop $(docker ps -a -q); docker system prune -a --volumes'
 
-# k8s
+### k8s
 alias k='kubectl'
 alias kc='kubectl config'
 alias kg='kubectl get'
@@ -38,11 +37,11 @@ alias kgpa="kubectl get pods --all-namespaces"
 alias ktn="kubectl top node"
 alias ktp="kubectl top pod"
 
-#https://krew.sigs.k8s.io/plugins/
+### https://krew.sigs.k8s.io/plugins/
 #df-pv
 #
 
-# git
+### git
 alias gl="git log --pretty=format:'%C(yellow)%H %ad%Cred%d %an %Creset%s' --decorate --date=format:'%m-%d-%Y %H:%M:%S'"
 alias ga="git add ."
 alias gap="git add -p"
@@ -76,9 +75,9 @@ alias gsp="git stash push -m"
 alias gsl="git stash list"
 alias gsa="git stash apply"
 
-#### list branches sorted by last modified
+# list branches sorted by last modified
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
 alias gblr="git branch --format '%(refname:short) %(upstream)'"
 
-# helpers
+### helpers
 alias watch="watch -n 5 --color "
