@@ -26,6 +26,7 @@
 ### Tips
 * bash
     * control + r → search previous commands
+    * _command_ 2>&1 | tee -a some_file → redirects standard error to standard output and standard output to some_file and also print it to standard output
 * VSCode
     * If you are using the Pylance VSCode extension you can set your source folder via the setting `python.analysis.extraPaths` (this fixes project imports not resolving)
     * CMD+P to search for a file

@@ -30,9 +30,9 @@
       {
           "text": "# TEMP",
           "color": "#000000",
-          "backgroundColor": "DarkOrange",
-          "overviewRulerColor": "DarkOrange",
-          "border": "1px solid DarkOrange",
+          "backgroundColor": "Silver",
+          "overviewRulerColor": "Silver",
+          "border": "1px solid Silver",
           "borderRadius": "3px",
           "isWholeLine": false
       },
@@ -64,11 +64,11 @@
         "isWholeLine": false
     },
       {
-          "text": "logger.",
+          "text": "breakpoint",
           "color": "#000000",
-          "backgroundColor": "Ivory",
-          "overviewRulerColor": "Ivory",
-          "border": "1px solid Ivory",
+          "backgroundColor": "Peru",
+          "overviewRulerColor": "Peru",
+          "border": "1px solid Peru",
           "borderRadius": "3px",
           "isWholeLine": true
       },

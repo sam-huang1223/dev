@@ -40,6 +40,13 @@ gcobc () {
     git checkout -b $1
 }
 
+gacap () {
+    git add .
+    git commit --amend --no-edit --verbose
+    git push
+}
+
+
 ### k8s
 kdps () {
     kubectl get pods --field-selector "status.phase=$1" -o name | xargs kubectl delete
@@ -51,12 +58,17 @@ lhf () {
     kl $(kg pods -n lighthouse -o custom-columns=':metadata.name' | tail -n 1) -n lighthouse -f
 }
 
-# run test with breakpoint()
-tbp () {
-    bazel run "test/python/$1" "--test_arg=-k=$2"
+# run test with breakpoint() - has to be run inside devbox (copy over first)
+tkbp () {
+    cat /dev/tty | bazel run "test/python/$1" "--test_arg=-k=$2" --test_arg=--disable-pytest-warnings
 }
 
 # run test without breakpoint()
+tk () {
+    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings --test_arg=-vvv --test_arg=-s --test_arg=-k="$2" --test_arg=--log-cli-level=INFO
+}
+
+# run test suite without breakpoint()
 t () {
-    bazel run "test/python/$1" --test_arg=--disable-pytest-warnings --test_arg=-vvv --test_arg=-s --test_arg=-k="$2" --test_arg=--log-cli-level=INFO
+    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings
 }

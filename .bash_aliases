@@ -6,9 +6,14 @@
 ### Source Snorkel shortcuts (this was done via ./strap shortcuts install)
 source /home/ubuntu/strap/devtools/shortcuts.sh
 
+alias db='docker exec -it strap-devbox bash'
+
 ### bash
 alias ftc='ls | rev | cut -d'.' -f1 | rev | sort | uniq -c'
 alias space='df -h | grep /dev/nvme'
+
+alias ssh='ssh -o StrictHostKeyChecking=no'
+alias sshi='ssh -o StrictHostKeyChecking=no -i ~/.ssh/workshop-shared-key.pem'
 
 ### docker
 # info
@@ -74,6 +79,9 @@ alias gcpc="git cherry-pick --continue"
 alias gsp="git stash push -m"
 alias gsl="git stash list"
 alias gsa="git stash apply"
+
+alias gp="git push"
+alias gpf="git push --force"
 
 # list branches sorted by last modified
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
