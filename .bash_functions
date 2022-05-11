@@ -15,6 +15,11 @@ up () {
     done
 }
 
+#### tmux
+tmuxa () {
+    tmux a -t $1 -d
+}
+
 ### git
 gpsup () {
     git push --set-upstream origin $(gbl | awk 'NR==1{print $8}')

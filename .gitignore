@@ -17,3 +17,9 @@
 !.vscode-server/data/Machine/
 .vscode-server/data/Machine/*
 !.vscode-server/data/Machine/settings.json
+
+!.config/
+.config/*
+!.config/micro/
+.config/micro/*
+!.config/micro/bindings.json

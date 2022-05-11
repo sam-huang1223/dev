@@ -1,3 +1,9 @@
+# Helpful
+
+* https://same.energy/
+* https://excalidraw.com/
+* 
+
 # Dev Environment
 ## Mac OS
 * Iterm2 + Oh my zsh + Powerlevel10k
@@ -10,11 +16,12 @@
 ## Terminal
 * exa
 * the_silver_searcher (ag)
-* tmux  
-    * `tmux a -t [TAG] -d` to resize screen
+* tmux
 * pbcopy (e.g. pbcopy < ~/.ssh/id_ed25519.pub)
 * fzf
 * glances [-2]
+* micro
+    * https://github.com/zyedidia/micro/blob/master/runtime/help/keybindings.md
 
 ### Commands
 * ssh-agent (see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)

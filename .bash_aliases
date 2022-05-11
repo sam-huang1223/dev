@@ -7,6 +7,7 @@
 source /home/ubuntu/strap/devtools/shortcuts.sh
 
 alias db='docker exec -it strap-devbox bash'
+alias dbud='cd ~/strap && ./strap devbox down && ./strap devbox up'
 
 ### bash
 alias ftc='ls | rev | cut -d'.' -f1 | rev | sort | uniq -c'

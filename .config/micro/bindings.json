@@ -1,0 +1,15 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "CtrlUnderscore": "lua:comment.comment",
+
+    "Alt-'": "NextTab",
+    "Alt-;": "PreviousTab",
+    
+    "Alt-,": "WordLeft",
+    "Alt-.": "WordRight",
+    "Alt-t": "AddTab",
+
+    "Ctrl-r": "command-edit:replace ",
+    "Ctrl-g": "FindPrevious",
+    "Ctrl-t": "FindNext"
+}
