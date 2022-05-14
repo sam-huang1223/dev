@@ -1,24 +1,15 @@
 {
     "editor.definitionLinkOpensInPeek": true,
-    "autoDocstring.guessTypes": false,
     "editor.accessibilitySupport": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-    },
     "files.autoSave": "onWindowChange",
     "editor.wordWrap": "on",
-    "terminal.integrated.inheritEnv": false,
-    "autoDocstring.docstringFormat": "numpy",
     "terminal.integrated.defaultProfile.osx": "zsh",
-    "security.workspace.trust.untrustedFiles": "open",
     "python.formatting.provider": "black",
-    "redhat.telemetry.enabled": false,
-    "liveServer.settings.host": "",
   
     "todohighlight.keywords": [
-        {
+      {
             "text": "# FIX",
             "color": "#000000",
             "backgroundColor": "Salmon",
@@ -26,7 +17,7 @@
             "border": "1px solid Salmon",
             "borderRadius": "3px",
             "isWholeLine": false
-        },
+      },
       {
           "text": "# TEMP",
           "color": "#000000",
@@ -57,12 +48,12 @@
       {
         "text": "# DEPRECATE",
         "color": "white",
-        "backgroundColor": "STEELBLUE",
-        "overviewRulerColor": "STEELBLUE",
-        "border": "1px solid STEELBLUE",
+        "backgroundColor": "DarkBlue",
+        "overviewRulerColor": "DarkBlue",
+        "border": "1px solid DarkBlue",
         "borderRadius": "3px",
         "isWholeLine": false
-    },
+      },
       {
           "text": "breakpoint",
           "color": "#000000",
@@ -70,7 +61,16 @@
           "overviewRulerColor": "Peru",
           "border": "1px solid Peru",
           "borderRadius": "3px",
-          "isWholeLine": true
+          "isWholeLine": true,
+      },
+      {
+        "text": "logger.",
+            "color": "#000000",
+            "backgroundColor": "SkyBlue",
+            "overviewRulerColor": "SkyBlue",
+            "border": "1px solid SkyBlue",
+            "borderRadius": "3px",
+            "isWholeLine": true
       },
       {
           "text": "# WARN",
