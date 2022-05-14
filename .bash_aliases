@@ -16,6 +16,8 @@ alias space='df -h | grep /dev/nvme'
 alias ssh='ssh -o StrictHostKeyChecking=no'
 alias sshi='ssh -o StrictHostKeyChecking=no -i ~/.ssh/workshop-shared-key.pem'
 
+alias watch="watch -n 5 --color "
+
 ### docker
 # info
 alias dnames='docker ps --format "{{.Names}}"'
@@ -88,5 +90,6 @@ alias gpf="git push --force"
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
 alias gblr="git branch --format '%(refname:short) %(upstream)'"
 
-### helpers
-alias watch="watch -n 5 --color "
+### SOPs
+alias j='(cd ~/journal_repo/ && gd)'
+alias ja='(cd ~/journal_repo/ && ga)'

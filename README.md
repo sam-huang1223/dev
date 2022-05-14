@@ -17,7 +17,6 @@
 * exa
 * the_silver_searcher (ag)
 * tmux
-* pbcopy (e.g. pbcopy < ~/.ssh/id_ed25519.pub)
 * fzf
 * glances [-2]
 * micro
@@ -31,13 +30,27 @@
     * type -a CMD # will show all referenced commands in order of precedence
 
 ### Tips
-* bash
-    * control + r → search previous commands
-    * _command_ 2>&1 | tee -a some_file → redirects standard error to standard output and standard output to some_file and also print it to standard output
+#### bash
+* control + r → search previous commands
+* _command_ 2>&1 | tee -a some_file → redirects standard error to standard output and standard output to some_file and also print it to standard output
+
+#### mac
+```bash
+# on local machine ~/.bashrc
+rcp () {
+    </dev/null ssh sam-huang-dev "$1" | pbcopy
+}
+```
+```bash
+# to copy to clipboard
+rcp "cat ~/text.txt"
+```
+
 * VSCode
     * If you are using the Pylance VSCode extension you can set your source folder via the setting `python.analysis.extraPaths` (this fixes project imports not resolving)
     * CMD+P to search for a file
     * CMD+SHIFT+F to find
+    * CTRL+j to remove linebreaks from selection
 * git
     * git cherry -v main  # see differing commits
     * git diff [--stat] [--cached] HEAD^

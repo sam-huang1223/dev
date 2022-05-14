@@ -34,3 +34,6 @@ __prompt_command() {
 
     PS1+='\[\e[33m\][\w]\[\e[0m\]\[\e[91m\]$(__git_ps1) $([[ ! -z "$(git config --get remote.origin.url)" ]] && basename -s .git $(git config --get remote.origin.url)) \e[0m \n\$ '
 }
+
+### Optional
+export PYTHONWARNINGS="ignore"
