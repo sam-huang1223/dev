@@ -3,6 +3,7 @@
     "editor.accessibilitySupport": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false,
+    "editor.tabCompletion": "on",
     "files.autoSave": "onWindowChange",
     "editor.wordWrap": "on",
     "terminal.integrated.defaultProfile.osx": "zsh",

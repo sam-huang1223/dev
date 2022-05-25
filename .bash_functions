@@ -53,17 +53,35 @@ gacap () {
 
 
 ### k8s
+# set namespace first using kcsn
 kdps () {
     kubectl get pods --field-selector "status.phase=$1" -o name | xargs kubectl delete
 }
 
+# e.g. kpf engine-dask-scheduler 15200:15100
+kpf () {
+    kubectl port-forward svc/$1 $2 --address 0.0.0.0
+}
+
+ks () {
+    kubectl scale --replicas=$2 deployment $1
+}
+
+
+### bazel
+btp () {
+    # e.g. cdi //src/python/internal/lighthouse_installer lighthouse-installer testdrive-1
+    docker exec strap-devbox bazel run "$1:image"
+    docker tag "snorkelai/$2:bazel" "snorkelai/$2:$3"
+    docker push "snorkelai/$2:$3"
+}
 
 ### snorkel
 lhf () {
-    kl $(kg pods -n lighthouse -o custom-columns=':metadata.name' | tail -n 1) -n lighthouse -f
+    kl $(kg pods -n lighthouse -o custom-columns=':metadata.name' | sed -n $(($1+1))p) -n lighthouse -f
 }
 
-# run test with breakpoint() - has to be run inside devbox (copy over first)
+# run test with breakpoint() - has to be run inside devbox
 tkbp () {
     cat /dev/tty | bazel run "test/python/$1" "--test_arg=-k=$2" --test_arg=--disable-pytest-warnings
 }
@@ -75,5 +93,5 @@ tk () {
 
 # run test suite without breakpoint()
 t () {
-    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings
+    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings  --test_arg=-s
 }

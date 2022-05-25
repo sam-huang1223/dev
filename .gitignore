@@ -23,3 +23,9 @@
 !.config/micro/
 .config/micro/*
 !.config/micro/bindings.json
+
+# !strap/
+# strap/*
+# !strap/.vscode/
+# strap/.vscode/*
+# !strap/.vscode/strap_snippets.code-snippets

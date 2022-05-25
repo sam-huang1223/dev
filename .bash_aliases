@@ -16,7 +16,9 @@ alias space='df -h | grep /dev/nvme'
 alias ssh='ssh -o StrictHostKeyChecking=no'
 alias sshi='ssh -o StrictHostKeyChecking=no -i ~/.ssh/workshop-shared-key.pem'
 
-alias watch="watch -n 5 --color "
+alias watch='watch -n 5 --color '
+
+alias psa='ps auxfww'
 
 ### docker
 # info
@@ -44,6 +46,8 @@ alias kgpa="kubectl get pods --all-namespaces"
 
 alias ktn="kubectl top node"
 alias ktp="kubectl top pod"
+
+alias kenv="kube_ps1"  # see .bashrc_custom
 
 ### https://krew.sigs.k8s.io/plugins/
 #df-pv
