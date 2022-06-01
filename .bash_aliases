@@ -103,3 +103,5 @@ alias gblr="git branch --format '%(refname:short) %(upstream)'"
 ### SOPs
 alias j='(cd ~/journal_repo/ && gd)'
 alias ja='(cd ~/journal_repo/ && ga)'
+
+alias dds='gcoc sh/markdown-dds'

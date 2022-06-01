@@ -35,6 +35,14 @@ __prompt_command() {
     PS1+='\[\e[33m\][\w]\[\e[0m\]\[\e[91m\]$(__git_ps1) $([[ ! -z "$(git config --get remote.origin.url)" ]] && basename -s .git $(git config --get remote.origin.url)) \e[0m \n\$ '
 }
 
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 ### Optional
 export PYTHONWARNINGS="ignore"
 source /home/ubuntu/kube-ps1/kube-ps1.sh
