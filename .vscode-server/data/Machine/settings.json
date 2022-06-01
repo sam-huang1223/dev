@@ -8,7 +8,7 @@
     "editor.wordWrap": "on",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "python.formatting.provider": "black",
-  
+    "workbench.list.horizontalScrolling": true,
     "todohighlight.keywords": [
       {
             "text": "# FIX",

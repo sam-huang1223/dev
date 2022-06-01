@@ -16,9 +16,11 @@ alias space='df -h | grep /dev/nvme'
 alias ssh='ssh -o StrictHostKeyChecking=no'
 alias sshi='ssh -o StrictHostKeyChecking=no -i ~/.ssh/workshop-shared-key.pem'
 
-alias watch='watch -n 5 --color '
+alias watch='watch -n 3 --color '
 
 alias psa='ps auxfww'
+
+alias aga='ag -A 10 -B 10 '
 
 ### docker
 # info
@@ -33,6 +35,7 @@ alias kc='kubectl config'
 alias kg='kubectl get'
 alias kl='kubectl logs'
 alias kd='kubectl describe'
+alias kdp='kubectl describe pod'
 
 alias ked='kubectl edit deployment'
 
@@ -89,6 +92,9 @@ alias gsa="git stash apply"
 
 alias gp="git push"
 alias gpf="git push --force"
+
+alias grp="git checkout HEAD -- "
+alias gra="git checkout ."
 
 # list branches sorted by last modified
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
