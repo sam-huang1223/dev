@@ -15,6 +15,10 @@ up () {
     done
 }
 
+gt () {
+    mkdir $1 && cd $1
+}
+
 #### tmux
 tmuxa () {
     tmux a -t $1 -d
@@ -23,6 +27,10 @@ tmuxa () {
 ### git
 gpsup () {
     git push --set-upstream origin $(gbl | awk 'NR==1{print $8}')
+}
+
+gpsupd () {
+    git push --set-upstream origin $(gbl | awk 'NR==1{print $8}') --dry-run
 }
 
 gbd () {
@@ -81,6 +89,18 @@ lhf () {
     kl $(kg pods -n lighthouse -o custom-columns=':metadata.name' | sed -n $(($1+1))p) -n lighthouse -f
 }
 
+tscan () {
+    trivy image --severity $2 --format json "snorkelai/$1" | grep -i -v INFO | python -m hjson.tool -j | jq
+}
+
+tscani () {
+    trivy image --ignore-unfixed --severity $2 --format json "snorkelai/$1" | grep -i -v INFO | python -m hjson.tool -j | jq
+}
+
+tscanv () {
+    trivy image --severity $2 --format json "snorkelai/$1" | grep -i -v INFO | python -m hjson.tool -j | jq '.[] | .Vulnerabilities | try .[] | select(.VulnerabilityID=="'"$3"'")'
+}
+
 # run test with breakpoint() - has to be run inside devbox
 tkbp () {
     cat /dev/tty | bazel run "test/python/$1" "--test_arg=-k=$2" --test_arg=--disable-pytest-warnings
@@ -88,7 +108,7 @@ tkbp () {
 
 # run test without breakpoint()
 tk () {
-    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings --test_arg=-vvv --test_arg=-s --test_arg=-k="$2" --test_arg=--log-cli-level=INFO
+    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings --test_arg=-vvv --test_arg=-s --test_arg=-k="$2" --test_arg=--log-cli-level="${3:-ERROR}"
 }
 
 # run test suite without breakpoint()

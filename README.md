@@ -27,6 +27,7 @@ rcp "cat ~/text.txt"
 * DashLane
 * ClockWise
 * OneTab
+* Column Copy
 
 ### Custom Search Engines
 * sh -> https://explainshell.com/explain?cmd=%s
@@ -54,6 +55,9 @@ rcp "cat ~/text.txt"
 * type CMD # will show command referenced by alias
     * type -a CMD # will show all referenced commands in order of precedence
 * CMD 2>&1 | tee -a some_file → redirects standard error to standard output and standard output to some_file and also print it to standard output
+* hjson can fix the formatting of almost correct json
+    * pip3 install hjson
+    * JSON_OUTPUT | python -m hjson.tool -j
 ### Tips
 * control + r → search previous commands
 
