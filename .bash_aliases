@@ -10,6 +10,9 @@ alias db='docker exec -it strap-devbox bash'
 alias dbud='cd ~/strap && ./strap devbox down && ./strap devbox up'
 alias tsh_login='tsh login --proxy=snorkel.teleport.sh --user=sam.huang@snorkel.ai --auth=okta'
 alias key='env | grep SNORKELFLOW_API_KEY'
+alias lc='./strap lint --skip yarn,safety'
+
+alias dlhs='./strap release --internal --services lighthouse && ./deploy-tools/flow/k8s/upgrade-eks-internal.sh -s lighthouse -v $(git rev-parse HEAD) -e staging && git checkout HEAD -- kubernetes/internal/lighthouse/overlays/staging/kustomization.yaml'
 
 #file count in each subdirectory
 alias rfc='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
@@ -81,6 +84,7 @@ alias gd="git diff"
 alias gds="git diff --stat"
 alias gdc="git diff --cached"
 alias gdlc="git diff HEAD^ HEAD"
+alias gdflc="git diff --name-only HEAD HEAD~1"
 
 alias gs="git status -s"
 
@@ -104,6 +108,10 @@ alias gsa="git stash apply"
 
 alias gp="git push"
 alias gpf="git push --force"
+alias gpd="git push --dry-run"
+alias gpn="git push --no-verify"
+
+alias gprm="git pull --rebase origin main"
 
 alias grp="git checkout HEAD -- "
 alias gra="git checkout ."
