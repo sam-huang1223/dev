@@ -47,7 +47,7 @@
           "isWholeLine": false
       },
       {
-        "text": "# DEPRECATE",
+        "text": "# TODO",
         "color": "white",
         "backgroundColor": "DarkBlue",
         "overviewRulerColor": "DarkBlue",

@@ -28,7 +28,7 @@ alias watch='watch -n 3 --color '
 
 alias psa='ps auxfww'
 
-alias aga='ag -A 10 -B 10 '
+alias ag='ag --ignore-dir={**/.env,**/yarn.lock,**/yarn-error.log} '
 
 alias ls='ls -lah'
 
@@ -93,7 +93,14 @@ alias gcom="git checkout main"
 
 alias gb="git branch"
 
+# unstage last commit
 alias gulc="git reset HEAD~"
+# unstage all
+alias grh="git reset HEAD"
+# discard all local changes
+alias grhh="git reset --hard HEAD"
+# reset path to HEAD
+alias grp="git checkout HEAD -- "
 
 alias grm="git rebase main"
 alias grc="git rebase --continue"
@@ -112,9 +119,6 @@ alias gpd="git push --dry-run"
 alias gpn="git push --no-verify"
 
 alias gprm="git pull --rebase origin main"
-
-alias grp="git checkout HEAD -- "
-alias gra="git checkout ."
 
 # list branches sorted by last modified
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"

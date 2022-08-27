@@ -73,6 +73,10 @@ dps () {
     docker ps --format 'table {{.Names}}\t{{.RunningFor}}'
 }
 
+den () {
+    docker exec -it -u root $(docker ps | grep $1 | cut -d ' ' -f1) /bin/bash
+}
+
 
 # k8s
 # set namespace first using kcsn
