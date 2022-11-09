@@ -45,5 +45,4 @@ fi
 
 ### Optional
 export PYTHONWARNINGS="ignore"
-source /home/ubuntu/kube-ps1/kube-ps1.sh
 export KUBE_EDITOR="/snap/bin/micro"

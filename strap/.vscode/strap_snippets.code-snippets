@@ -3,5 +3,10 @@
 		"prefix": ["dbga"],
 		"body": ["import debugpy; debugpy.listen(('localhost', 5322)); debugpy.wait_for_client()"],
 		"description": "Wait for debugpy attachment"
-	}
+	},
+	"Add a line level profiler": {
+		"prefix": ["@profile"],
+		"body": ["from profiling_utils.profile_decorator import profile\n\n\n@profile"],
+		"description": "Add a line level profiler"
+	},
 }
