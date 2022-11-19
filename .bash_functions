@@ -33,6 +33,16 @@ gpsupd () {
     git push --set-upstream origin $(gbl | awk 'NR==1{print $8}') --dry-run
 }
 
+# see https://stackoverflow.com/questions/19821749/git-cherry-pick-or-merge-specific-directory-from-another-branch
+# e.g. git format-patch -k --stdout master...featureA -- tools/mytool | git am -3 -k
+gaf () {
+    git format-patch -k --stdout $1 -- $2 | git am -3 -k
+}
+
+gac () {
+    git am --continue
+}
+
 # gbfl FILE_PATH LINE_NUMBER_START LINE_NUMBER_END
 gbfl () {
     git blame -L "$2,$3" -- $1
@@ -87,10 +97,6 @@ kdps () {
 # e.g. kpf engine-dask-scheduler 15200:15100
 kpf () {
     kubectl port-forward svc/$1 $2 --address 0.0.0.0
-}
-
-ks () {
-    kubectl scale --replicas=$2 deployment $1
 }
 
 # snorkel

@@ -41,7 +41,9 @@ alias dockernuke='docker stop $(docker ps -a -q); docker system prune -a --volum
 
 ### k8s
 alias k='kubectl'
+alias kk='kubectl krew'
 alias kc='kubectl config'
+alias ks='kubectl stern'
 alias kg='kubectl get'
 alias kgp='kubectl get pods'
 alias kl='kubectl logs'
@@ -85,6 +87,9 @@ alias gds="git diff --stat"
 alias gdc="git diff --cached"
 alias gdlc="git diff HEAD^ HEAD"
 alias gdflc="git diff --name-only HEAD HEAD~1"
+
+alias gdm="git diff main...HEAD"
+alias gdfm="git diff --name-only main...HEAD"
 
 alias gs="git status -s"
 
