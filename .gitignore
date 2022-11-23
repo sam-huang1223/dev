@@ -9,6 +9,8 @@
 !.tmux.conf
 !README.md
 
+!helpers.py
+
 # fun little exercise in allowing for a specific file in nested subdirectories
 !.vscode-server/
 .vscode-server/*

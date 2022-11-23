@@ -25,6 +25,7 @@ alias ssh='ssh -o StrictHostKeyChecking=no'
 alias sshi='ssh -i ~/.ssh/workshop-shared-key.pem'
 
 alias watch='watch -n 3 --color '
+alias watchm='watch -n 60 --color '
 
 alias psa='ps auxfww'
 
