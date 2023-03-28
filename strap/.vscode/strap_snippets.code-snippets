@@ -9,4 +9,65 @@
 		"body": ["from profiling_utils.profile_decorator import profile\n\n\n@profile"],
 		"description": "Add a line level profiler"
 	},
+	"Add a pdb set trace statement": {
+		"prefix": ["pdbst"],
+		"body": ["import pdb,sys;sys.stdin=open('/dev/stdin');pdb.set_trace()"],
+		"description": "Add a pdb set trace statement"
+	},
+	"React component with Snorkel style standards": {
+		"prefix": "react-component",
+		"body": [
+		  "const ${1:Component} = () => {",
+		  "  return <></>;",
+		  "};",
+		  "",
+		  "export default ${1:Component};",
+		  "",
+		],
+		"description": "Create a Typescript React Functional Component with props and interface"
+	  },
+	"React component with props, Snorkel style standards": {
+		"prefix": "react-component-props",
+		"body": [
+		  "type ${1:Component}Props = {",
+		  "  ${2}: ${3:string};",
+		  "};",
+		  "",
+		  "const ${1:Component} = ({ ${2} }: ${1:Component}Props) => {",
+		  "  return <></>;",
+		  "};",
+		  "",
+		  "export default ${1:Component};",
+		  "",
+		],
+		"description": "Create a Typescript React Functional Component with props and interface"
+	  },
+	  "React test with Snorkel style standards": {
+		"prefix": "react-test",
+		"body": [
+		  "import { render } from '@testing-library/react';",
+		  "import ${1:Component} from '..';",
+		  "",
+		  "describe('${1:Component}', () => {",
+		  "  it('should render successfully', () => {",
+		  "    const { baseElement } = render(<${1:Component} />);",
+		  "    expect(baseElement).toBeTruthy();",
+		  "  });",
+		  "});",
+		  "",
+		],
+		"description": "Create a Typescript React Test"
+	  },
+	  "React atom": {
+		"prefix": "react-atom",
+		"body": [
+		  "import { atom } from 'jotai';",
+		  "",
+		  "export const ${1:atomName} = atom<${2:type}>(${3:initialValue});",
+		  "",
+		  "export default null;",
+		  "",
+		],
+		"description": "Create a jotai atom boilerplate"
+	  },
 }

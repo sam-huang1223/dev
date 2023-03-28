@@ -6,6 +6,8 @@
 ### Source Snorkel shortcuts (this was done via ./strap shortcuts install)
 source /home/ubuntu/strap/devtools/shortcuts.sh
 
+alias s='./strap'
+alias rf='ruff --fix .'
 alias db='docker exec -it strap-devbox bash'
 alias dbud='cd ~/strap && ./strap devbox down && ./strap devbox up'
 alias tsh_login='tsh login --proxy=snorkel.teleport.sh --user=sam.huang@snorkel.ai --auth=okta'
@@ -13,6 +15,8 @@ alias key='env | grep SNORKELFLOW_API_KEY'
 alias lc='./strap lint --skip yarn,safety'
 
 alias dlhs='./strap release --internal --services lighthouse && ./deploy-tools/flow/k8s/upgrade-eks-internal.sh -s lighthouse -v $(git rev-parse HEAD) -e staging && git checkout HEAD -- kubernetes/internal/lighthouse/overlays/staging/kustomization.yaml'
+
+alias jc='jira issue create -t Story -C Provisioning --fix-version "N/A (nothing to release)" --no-input -s'
 
 #file count in each subdirectory
 alias rfc='du -a | cut -d/ -f2 | sort | uniq -c | sort -nr'
@@ -34,22 +38,26 @@ alias ag='ag --ignore-dir={**/.env,**/yarn.lock,**/yarn-error.log} '
 alias ls='ls -lah'
 
 ### docker
-# info
+alias d='docker'
+#### info
 alias dnames='docker ps --format "{{.Names}}"'
 alias dports='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a'
-# actions
+#### actions
 alias dockernuke='docker stop $(docker ps -a -q); docker system prune -a --volumes'
 
 ### k8s
 alias k='kubectl'
 alias kk='kubectl krew'
 alias kc='kubectl config'
+alias kcg='kubectl config get-contexts'
 alias ks='kubectl stern'
 alias kg='kubectl get'
 alias kgp='kubectl get pods'
+alias kgd='kubectl get deployments'
 alias kl='kubectl logs'
 alias kd='kubectl describe'
 alias kdp='kubectl describe pod'
+alias kdd='kubectl describe deployment'
 
 alias ked='kubectl edit deployment'
 
@@ -62,6 +70,8 @@ alias kdelpv="kubectl get pv | grep Released | awk '$1 {print$1}' | while read v
 
 alias kgpa="kubectl get pods --all-namespaces"
 
+alias kpf="kubectl port-forward --address 0.0.0.0"
+
 alias ktn="kubectl top node"
 alias ktp="kubectl top pod"
 
@@ -70,6 +80,11 @@ alias kenv="kube_ps1"  # see .bashrc_custom
 ### https://krew.sigs.k8s.io/plugins/
 #df-pv
 #
+
+### yarn
+alias yt="yarn test --silent"
+alias yf="yarn format"
+alias yl="yarn lint --fix"
 
 ### git
 alias gl="git log --pretty=format:'%C(yellow)%H %ad%Cred%d %an %Creset%s' --decorate --date=format:'%m-%d-%Y %H:%M:%S' -n 7"

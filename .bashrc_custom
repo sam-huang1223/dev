@@ -46,7 +46,9 @@ fi
 ### Optional
 export PYTHONWARNINGS="ignore"
 export KUBE_EDITOR="/snap/bin/micro"
+# for k9s (snap installable)
+export KUBECONFIG=$HOME/.kube/config
 
 # https://krew.sigs.k8s.io/docs/user-guide/setup/install/
 ## kubectl krew install stern
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$HOME/.linuxbrew/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

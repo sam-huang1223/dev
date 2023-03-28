@@ -95,8 +95,12 @@ kdps () {
 }
 
 # e.g. kpf engine-dask-scheduler 15200:15100
-kpf () {
+kpfsvc () {
     kubectl port-forward svc/$1 $2 --address 0.0.0.0
+}
+
+krur () {
+    kubectl rollout undo $1 --to-revision=$2
 }
 
 # snorkel
@@ -154,12 +158,12 @@ tk () {
 
 # run test suite without breakpoint()
 t () {
-    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings  --test_arg=-s
+    docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings --test_arg=-s
 }
 
 # run test suite without cache and with full output
 tf () {
-    ./strap test python "test/python/$1" --cache-test-results=no --test-output=all
+    ./strap test python "test/python/$1" --test-output=all
 }
 
 # run test suite without breakpoint() with -v
@@ -167,7 +171,7 @@ tv () {
     docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings  --test_arg=-s --test_arg=-v
 }
 
-# run test suite without breakpoint() with -vvv
+# run test suite without breakpoint() with -vv
 tvv () {
     docker exec strap-devbox bazel run "test/python/$1" --test_arg=--disable-pytest-warnings  --test_arg=-s --test_arg=-vv
 }
