@@ -3,9 +3,7 @@
 #    . ~/.bash_aliases
 #fi
 
-### Source Snorkel shortcuts (this was done via ./strap shortcuts install)
-source /home/ubuntu/strap/devtools/shortcuts.sh
-
+# snorkel
 alias s='./strap'
 alias rf='ruff --fix .'
 alias db='docker exec -it strap-devbox bash'
@@ -144,9 +142,3 @@ alias gprm="git pull --rebase origin main"
 # list branches sorted by last modified
 alias gbl="git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 10"
 alias gblr="git branch --format '%(refname:short) %(upstream)'"
-
-### SOPs
-alias j='(cd ~/journal_repo/ && gd)'
-alias ja='(cd ~/journal_repo/ && ga)'
-
-alias dds='gcoc sh/markdown-dds'
