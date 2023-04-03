@@ -5,15 +5,6 @@
 #    . ~/.bash_functions
 #fi
 
-# snorkel
-jv () {
-    jira issue view ENG-$1
-}
-
-ja () {
-    jira issue comment add ENG-$1 "$2" --no-input
-}
-
 # bash
 up () {
     levels=$1
